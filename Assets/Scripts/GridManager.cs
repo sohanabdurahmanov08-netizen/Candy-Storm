@@ -3,30 +3,40 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    void Start()
-    {
-        Grid = new GameObject[GridDimension, GridDimension];
-        InitGrid();
-    }
-    
     public List<Sprite> Sprites = new List<Sprite>();
     public GameObject TilePrefab;
     public int GridDimension = 8;
     public float Distance = 1.0f;
     private GameObject[,] Grid;
+
+    void Start()
+    {
+        Grid = new GameObject[GridDimension, GridDimension];
+        InitGrid();
+    }
+
     void InitGrid()
     {
-        Vector3 positionOffset = transform.position - new Vector3(GridDimension * Distance / 2.0f, GridDimension * Distance / 2.0f, 0); // 1
-        for (int row = 0; row < GridDimension; row++)
-            for (int column = 0; column < GridDimension; column++) // 2
-            {
-                GameObject newTile = Instantiate(TilePrefab); // 3
-                SpriteRenderer renderer = newTile.GetComponent<SpriteRenderer>(); // 4
-                renderer.sprite = Sprites[Random.Range(0, Sprites.Count)]; // 5
-                newTile.transform.parent = transform; // 6
-                newTile.transform.position = new Vector3(column * Distance, row * Distance, 0) + positionOffset; // 7
+        Vector3 positionOffset = transform.position -
+            new Vector3(GridDimension * Distance / 2.0f, GridDimension * Distance / 2.0f, 0);
 
-                Grid[column, row] = newTile; // 8
+        for (int row = 0; row < GridDimension; row++)
+        {
+            for (int column = 0; column < GridDimension; column++)
+            {
+                GameObject newTile = Instantiate(TilePrefab);
+
+                SpriteRenderer renderer = newTile.GetComponent<SpriteRenderer>();
+                renderer.sprite = Sprites[Random.Range(0, Sprites.Count)];
+
+                Tile tile = newTile.AddComponent<Tile>();
+
+                newTile.transform.parent = transform;
+                newTile.transform.position =
+                    new Vector3(column * Distance, row * Distance, 0) + positionOffset;
+
+                Grid[column, row] = newTile;
             }
+        }
     }
 }
