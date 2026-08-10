@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 0debf37b469db7b4bae1b118079b6b26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -737151905711523730
+    second: Kubic__12_-removebg-preview_0
+  - first:
+      213: 8551906147635830265
+    second: Kubic__12_-removebg-preview_1
+  - first:
+      213: 9178095205088860011
+    second: Kubic__12_-removebg-preview_2
+  - first:
+      213: -7154227614186499505
+    second: Kubic__12_-removebg-preview_3
+  - first:
+      213: 4107384899385146856
+    second: Kubic__12_-removebg-preview_4
+  - first:
+      213: -2365338702880775365
+    second: Kubic__12_-removebg-preview_5
+  - first:
+      213: -898996334006048327
+    second: Kubic__12_-removebg-preview_6
+  - first:
+      213: 6203166244462290452
+    second: Kubic__12_-removebg-preview_7
+  - first:
+      213: -5333296717407166772
+    second: Kubic__12_-removebg-preview_8
+  - first:
+      213: -7826898563652846848
+    second: Kubic__12_-removebg-preview_9
+  - first:
+      213: 513656365767790910
+    second: Kubic__12_-removebg-preview_10
+  - first:
+      213: 1098142041879745388
+    second: Kubic__12_-removebg-preview_11
+  - first:
+      213: 7064775145997302791
+    second: Kubic__12_-removebg-preview_12
+  - first:
+      213: 6155615028060267627
+    second: Kubic__12_-removebg-preview_13
+  - first:
+      213: -361396056314048616
+    second: Kubic__12_-removebg-preview_14
+  - first:
+      213: 8249732643273658979
+    second: Kubic__12_-removebg-preview_15
+  - first:
+      213: 794130120800856003
+    second: Kubic__12_-removebg-preview_16
+  - first:
+      213: 2554345686629495389
+    second: Kubic__12_-removebg-preview_17
+  - first:
+      213: 2566112739877253788
+    second: Kubic__12_-removebg-preview_18
+  - first:
+      213: 2602732165361064194
+    second: Kubic__12_-removebg-preview_19
+  - first:
+      213: 2426759187316969907
+    second: Kubic__12_-removebg-preview_20
+  - first:
+      213: 4586866388311159106
+    second: Kubic__12_-removebg-preview_21
+  - first:
+      213: 8798971732789395719
+    second: Kubic__12_-removebg-preview_22
+  - first:
+      213: 7436238537276425503
+    second: Kubic__12_-removebg-preview_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 324
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68ff825f3c15c5f0800000000000000
+      internalID: -737151905711523730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 325
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd1052d4597ea670800000000000000
+      internalID: 8551906147635830265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 325
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67990e16f42f5f70800000000000000
+      internalID: 9178095205088860011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 324
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f429f1eb3e317bc90800000000000000
+      internalID: -7154227614186499505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 325
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edb7abddcc500930800000000000000
+      internalID: 4107384899385146856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 325
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33ee495bf0ac2fd0800000000000000
+      internalID: -2365338702880775365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 324
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9e039e89f1683f0800000000000000
+      internalID: -898996334006048327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 324
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4166ed365d2161650800000000000000
+      internalID: 6203166244462290452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 325
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce503d74e25cf5b0800000000000000
+      internalID: -5333296717407166772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 352
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bf47c9935416390800000000000000
+      internalID: -7826898563652846848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 324
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3115324ebfd02700800000000000000
+      internalID: 513656365767790910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 226
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c631a2f6e526d3f00800000000000000
+      internalID: 1098142041879745388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 128
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c7d23809f1b0260800000000000000
+      internalID: 7064775145997302791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64a69111432d6550800000000000000
+      internalID: 6155615028060267627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f8c2893301cfaf0800000000000000
+      internalID: -361396056314048616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362554e4120fc7270800000000000000
+      internalID: 8249732643273658979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 128
+        width: 11
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7e5cb2321550b00800000000000000
+      internalID: 794130120800856003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d523a155edbd27320800000000000000
+      internalID: 2554345686629495389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 128
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c92fcf9e0f9ac9320800000000000000
+      internalID: 2566112739877253788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 128
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20954d15d13ce1420800000000000000
+      internalID: 2602732165361064194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 128
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b191739f949da120800000000000000
+      internalID: 2426759187316969907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 128
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241377b8da2d7af30800000000000000
+      internalID: 4586866388311159106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7018d990c2a3c1a70800000000000000
+      internalID: 8798971732789395719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kubic__12_-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 128
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f158e6ffc83d23760800000000000000
+      internalID: 7436238537276425503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kubic__12_-removebg-preview_0: -737151905711523730
+      Kubic__12_-removebg-preview_1: 8551906147635830265
+      Kubic__12_-removebg-preview_10: 513656365767790910
+      Kubic__12_-removebg-preview_11: 1098142041879745388
+      Kubic__12_-removebg-preview_12: 7064775145997302791
+      Kubic__12_-removebg-preview_13: 6155615028060267627
+      Kubic__12_-removebg-preview_14: -361396056314048616
+      Kubic__12_-removebg-preview_15: 8249732643273658979
+      Kubic__12_-removebg-preview_16: 794130120800856003
+      Kubic__12_-removebg-preview_17: 2554345686629495389
+      Kubic__12_-removebg-preview_18: 2566112739877253788
+      Kubic__12_-removebg-preview_19: 2602732165361064194
+      Kubic__12_-removebg-preview_2: 9178095205088860011
+      Kubic__12_-removebg-preview_20: 2426759187316969907
+      Kubic__12_-removebg-preview_21: 4586866388311159106
+      Kubic__12_-removebg-preview_22: 8798971732789395719
+      Kubic__12_-removebg-preview_23: 7436238537276425503
+      Kubic__12_-removebg-preview_3: -7154227614186499505
+      Kubic__12_-removebg-preview_4: 4107384899385146856
+      Kubic__12_-removebg-preview_5: -2365338702880775365
+      Kubic__12_-removebg-preview_6: -898996334006048327
+      Kubic__12_-removebg-preview_7: 6203166244462290452
+      Kubic__12_-removebg-preview_8: -5333296717407166772
+      Kubic__12_-removebg-preview_9: -7826898563652846848
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

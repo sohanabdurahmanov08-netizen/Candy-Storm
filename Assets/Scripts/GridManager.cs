@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GridManager : MonoBehaviour
 {
@@ -11,9 +12,56 @@ public class GridManager : MonoBehaviour
     public float Distance = 1.0f;
     private GameObject[,] Grid;
 
+    public GameObject GameOverMenu;
+    public TextMeshProUGUI MovesText;
+    public TextMeshProUGUI ScoreText;
+
+    public int StartingMoves = 50;
+    public bool IsGameOver = false;
+
+    private int _numMoves;
+    public int NumMoves
+    {
+        get { return _numMoves; }
+        set
+        {
+            _numMoves = value;
+            if (MovesText != null)
+                MovesText.text = _numMoves.ToString();
+        }
+    }
+
+    private int _score;
+    public int Score
+    {
+        get { return _score; }
+        set
+        {
+            _score = value;
+            if (ScoreText != null)
+                ScoreText.text = _score.ToString();
+        }
+    }
+
     void Awake()
     {
         Instance = this;
+
+        if (MovesText == null)
+            Debug.LogWarning("GridManager: MovesText не назначен в инспекторе!");
+        if (ScoreText == null)
+            Debug.LogWarning("GridManager: ScoreText не назначен в инспекторе!");
+        if (GameOverMenu == null)
+            Debug.LogWarning("GridManager: GameOverMenu не назначен в инспекторе!");
+        if (Sprites == null || Sprites.Count == 0)
+            Debug.LogError("GridManager: список Sprites пуст! Заполните его в инспекторе.");
+
+        IsGameOver = false;
+        Score = 0;
+        NumMoves = StartingMoves;
+
+        if (GameOverMenu != null)
+            GameOverMenu.SetActive(false);
     }
 
     void Start()
@@ -45,18 +93,15 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    // Возвращает SpriteRenderer клетки по координатам, или null если координаты вне сетки
     SpriteRenderer GetSpriteRendererAt(int column, int row)
     {
         if (column < 0 || column >= GridDimension || row < 0 || row >= GridDimension)
             return null;
 
         GameObject tile = Grid[column, row];
-        SpriteRenderer renderer = tile.GetComponent<SpriteRenderer>();
-        return renderer;
+        return tile.GetComponent<SpriteRenderer>();
     }
 
-    // Ищет подряд идущие одинаковые клетки вдоль столбца (по горизонтали, увеличивая column)
     List<SpriteRenderer> FindColumnMatchForTile(int col, int row, Sprite sprite)
     {
         List<SpriteRenderer> result = new List<SpriteRenderer>();
@@ -70,7 +115,6 @@ public class GridManager : MonoBehaviour
         return result;
     }
 
-    // Ищет подряд идущие одинаковые клетки вдоль строки (по вертикали, увеличивая row)
     List<SpriteRenderer> FindRowMatchForTile(int col, int row, Sprite sprite)
     {
         List<SpriteRenderer> result = new List<SpriteRenderer>();
@@ -84,7 +128,6 @@ public class GridManager : MonoBehaviour
         return result;
     }
 
-    // Проверяет всю сетку на совпадения от 3 и более, удаляет их (sprite = null)
     bool CheckMatches()
     {
         HashSet<SpriteRenderer> matchedTiles = new HashSet<SpriteRenderer>();
@@ -118,16 +161,25 @@ public class GridManager : MonoBehaviour
             renderer.sprite = null;
         }
 
+        if (matchedTiles.Count > 0)
+            Score += matchedTiles.Count;
+
         return matchedTiles.Count > 0;
     }
 
-    // Сдвигает клетки вниз, заполняя пустоты новыми случайными спрайтами сверху
     void FillHoles()
     {
+        if (Sprites == null || Sprites.Count == 0)
+        {
+            Debug.LogError("FillHoles: список Sprites пуст, заполнение отменено.");
+            return;
+        }
+
         for (int column = 0; column < GridDimension; column++)
         {
             for (int row = 0; row < GridDimension; row++)
             {
+                int safety = 0;
                 while (GetSpriteRendererAt(column, row).sprite == null)
                 {
                     for (int filler = row; filler < GridDimension - 1; filler++)
@@ -139,41 +191,81 @@ public class GridManager : MonoBehaviour
 
                     SpriteRenderer last = GetSpriteRendererAt(column, GridDimension - 1);
                     last.sprite = Sprites[Random.Range(0, Sprites.Count)];
+
+                    safety++;
+                    if (safety > GridDimension + 5)
+                    {
+                        Debug.LogError("FillHoles: слишком много итераций, прерываю (column=" + column + ", row=" + row + ")");
+                        break;
+                    }
                 }
             }
         }
     }
 
+    void GameOver()
+    {
+        IsGameOver = true;
+        Debug.Log("GAME OVER");
+        PlayerPrefs.SetInt("score", Score);
+
+        if (GameOverMenu != null)
+            GameOverMenu.SetActive(true);
+
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.PlaySound(SoundType.TypeGameOver);
+    }
+
     public void SwapTiles(Vector2Int tile1Position, Vector2Int tile2Position)
     {
+        if (IsGameOver)
+            return;
+
         GameObject tile1 = Grid[tile1Position.x, tile1Position.y];
         SpriteRenderer renderer1 = tile1.GetComponent<SpriteRenderer>();
 
         GameObject tile2 = Grid[tile2Position.x, tile2Position.y];
         SpriteRenderer renderer2 = tile2.GetComponent<SpriteRenderer>();
 
-        // Меняем спрайты местами
         Sprite temp = renderer1.sprite;
         renderer1.sprite = renderer2.sprite;
         renderer2.sprite = temp;
 
-        // Проверяем, появилось ли совпадение после обмена
         bool changesOccur = CheckMatches();
 
         if (!changesOccur)
         {
-            // Совпадений нет — отменяем обмен, возвращаем как было
             temp = renderer1.sprite;
             renderer1.sprite = renderer2.sprite;
             renderer2.sprite = temp;
+
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlaySound(SoundType.TypePop);
         }
         else
         {
-            // Совпадение есть — заполняем дыры и проверяем цепные реакции
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.PlaySound(SoundType.TypeMove);
+
+            NumMoves--;
+
+            int loopSafety = 0;
             do
             {
                 FillHoles();
+                loopSafety++;
+                if (loopSafety > 50)
+                {
+                    Debug.LogError("SwapTiles: слишком много итераций FillHoles/CheckMatches, прерываю цикл.");
+                    break;
+                }
             } while (CheckMatches());
+
+            if (NumMoves <= 0)
+            {
+                NumMoves = 0;
+                GameOver();
+            }
         }
     }
 }

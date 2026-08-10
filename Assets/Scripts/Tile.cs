@@ -24,6 +24,12 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GridManager.Instance == null || GridManager.Instance.IsGameOver)
+            return;
+
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.PlaySound(SoundType.TypeSelect);
+
         if (selected != null)
         {
             if (selected == this)
