@@ -24,7 +24,7 @@ public class Tile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GridManager.Instance == null || GridManager.Instance.IsGameOver)
+        if (GridManager.Instance == null || GridManager.Instance.IsGameOver || GridManager.Instance.IsBusy)
             return;
 
         if (SoundManager.Instance != null)
@@ -32,9 +32,7 @@ public class Tile : MonoBehaviour
 
         if (selected != null)
         {
-            if (selected == this)
-                return;
-
+            if (selected == this) return;
             selected.Unselect();
 
             if (Vector2Int.Distance(selected.Position, Position) == 1)

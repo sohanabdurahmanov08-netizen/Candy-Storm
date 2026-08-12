@@ -2848,6 +2848,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5622901713081898559, guid: ad4a5721233a189428769b064008dae7, type: 3}
+    - target: {fileID: 2596907166268061106, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -50.3999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596907166268061106, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -25.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3032250561953991518, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2997,6 +3005,18 @@ PrefabInstance:
       value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3627043738422154637, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_margin.w
+      value: 24.18872
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627043738422154637, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_margin.x
+      value: 58.621643
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627043738422154637, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_margin.y
+      value: 17.536804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3627043738422154637, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
       propertyPath: m_fontStyle
       value: 8
       objectReference: {fileID: 0}
@@ -3057,16 +3077,44 @@ PrefabInstance:
       value: -6.6108
       objectReference: {fileID: 0}
     - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_Score
       objectReference: {fileID: 0}
     - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GridManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RestartButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443639870950839464, guid: e9a1444a1bbce63408088127e5129b45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4510,11 +4558,13 @@ MonoBehaviour:
   TilePrefab: {fileID: 8240428727968202350, guid: 393699a350c180142a909b05ddff3f0a, type: 3}
   GridDimension: 8
   Distance: 1.1
+  AnimationSpeed: 8
   GameOverMenu: {fileID: 921846705}
   MovesText: {fileID: 639729237}
   ScoreText: {fileID: 1286788379}
   StartingMoves: 10
   IsGameOver: 0
+  IsBusy: 0
 --- !u!224 &1242272099
 RectTransform:
   m_ObjectHideFlags: 0
