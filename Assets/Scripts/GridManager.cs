@@ -21,6 +21,11 @@ public class GridManager : MonoBehaviour
     public TextMeshProUGUI MovesText;
     public TextMeshProUGUI ScoreText;
 
+    // Попапы -1 / +1
+    public GameObject MinusOneText;
+    public GameObject PlusOneText;
+    public float PopupDuration = 0.8f;
+
     public int StartingMoves = 50;
     public bool IsGameOver = false;
     public bool IsBusy = false;
@@ -29,7 +34,17 @@ public class GridManager : MonoBehaviour
     public int NumMoves
     {
         get { return _numMoves; }
-        set { _numMoves = value; if (MovesText != null) MovesText.text = _numMoves.ToString(); }
+        set
+        {
+            int delta = value - _numMoves; // на сколько изменилось значение
+            _numMoves = value;
+            if (MovesText != null) MovesText.text = _numMoves.ToString();
+
+            if (delta < 0)
+                ShowPopup(MinusOneText);
+            else if (delta > 0)
+                ShowPopup(PlusOneText);
+        }
     }
 
     private int _score;
@@ -46,6 +61,9 @@ public class GridManager : MonoBehaviour
         Score = 0;
         NumMoves = StartingMoves;
         if (GameOverMenu != null) GameOverMenu.SetActive(false);
+
+        if (MinusOneText != null) MinusOneText.SetActive(false);
+        if (PlusOneText != null) PlusOneText.SetActive(false);
     }
 
     void Start()
@@ -61,6 +79,19 @@ public class GridManager : MonoBehaviour
         {
             ShuffleBoard();
         }
+    }
+
+    void ShowPopup(GameObject popup)
+    {
+        if (popup == null) return;
+        popup.SetActive(true);
+        StartCoroutine(HidePopupRoutine(popup));
+    }
+
+    IEnumerator HidePopupRoutine(GameObject popup)
+    {
+        yield return new WaitForSeconds(PopupDuration);
+        popup.SetActive(false);
     }
 
     Vector3 GetWorldPosition(int column, int row)
@@ -120,7 +151,7 @@ public class GridManager : MonoBehaviour
         return result;
     }
 
-    // Изменено: теперь метод возвращает максимальную длину собранной линии (0, если совпадений нет)
+    // Возвращает длину самой длинной найденной линии совпадений (0, если совпадений нет)
     int CheckMatches()
     {
         HashSet<SpriteRenderer> matchedTiles = new HashSet<SpriteRenderer>();
@@ -133,7 +164,6 @@ public class GridManager : MonoBehaviour
                 SpriteRenderer current = GetSpriteRendererAt(column, row);
                 if (current == null || current.sprite == null) continue;
 
-                // Проверка по горизонтали
                 List<SpriteRenderer> h = FindColumnMatchForTile(column, row, current.sprite);
                 if (h.Count >= 2)
                 {
@@ -143,7 +173,6 @@ public class GridManager : MonoBehaviour
                     if (length > maxMatchLength) maxMatchLength = length;
                 }
 
-                // Проверка по вертикали
                 List<SpriteRenderer> v = FindRowMatchForTile(column, row, current.sprite);
                 if (v.Count >= 2)
                 {
@@ -259,7 +288,6 @@ public class GridManager : MonoBehaviour
 
         if (initialMatchLength == 0)
         {
-            // Отмена хода, если совпадений нет
             yield return StartCoroutine(AnimateSwap(tile1, tile2, pos1, pos2));
 
             temp = renderer1.sprite;
@@ -275,16 +303,15 @@ public class GridManager : MonoBehaviour
         {
             if (SoundManager.Instance != null) SoundManager.Instance.PlaySound(SoundType.TypeMove);
 
-            // Логика подчета ходов:
             if (initialMatchLength == 3)
             {
-                NumMoves--; // 3 в ряд — минус ход
+                NumMoves--;
             }
             else if (initialMatchLength >= 5)
             {
-                NumMoves++; // 5 в ряд и больше — плюс ход
+                NumMoves++;
             }
-            // При initialMatchLength == 4 ничего не делаем (ход не отнимается)
+            // при initialMatchLength == 4 ничего не меняем
 
             int loopSafety = 0;
             bool matched;
